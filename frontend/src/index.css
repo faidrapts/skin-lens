@@ -1,0 +1,62 @@
+/* src/index.css */
+body {
+    background-color: rgb(49, 25, 49);
+    color: #d3d3d3;
+    margin: 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.card-content {
+    background-color: #f5f5f5; /* Light greyish background */
+    color: #000; /* Black text */
+    border: 2px solid #d3d3d3; /* Light greyish border */
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 2rem; /* Add margin-top to create space between elements */
+}
+
+.large-button {
+    padding: 16px 32px; /* Larger padding */
+    font-size: 1.5rem; /* Larger font size */
+    border-radius: 9999px; /* Fully rounded */
+    background: linear-gradient(to right, #3b82f6, #9333ea); /* Gradient background */
+    color: #000; /* Black text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.large-button:hover {
+    background: linear-gradient(to right, #2563eb, #7e22ce); /* Darker gradient on hover */
+}
+
+.large-button:disabled {
+    background: #d1d5db; /* Grey background when disabled */
+    cursor: not-allowed; /* Not-allowed cursor when disabled */
+}
