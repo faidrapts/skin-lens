@@ -5,8 +5,8 @@
 
 /* Custom styles */
 body {
-    background-color: #f0f0f0; /* Light grey background */
-    color: #333; /* Dark text color */
+    background-color: #fdfdfd; /* Very light nature beige background */
+    color: #234153;  /* Dark blue text color */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,23 @@ body {
 h1 {
     font-size: 3rem;
     margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #234153; /* Dark blue text color */
+}
+
+.caption {
+    font-size: 1.25rem;
+    color: #234153; /* Dark blue text color */
+    margin-top: 0.25rem;
+}
+
+.separator {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: rgba(220, 220, 220, 0.062); /* Almost transparent pale line */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Tiny shadow */
+    margin: 1rem 1rem;
 }
 
 .main-content {
@@ -27,33 +44,34 @@ h1 {
     justify-content: center;
     flex-grow: 1;
     width: 100%;
+    padding: 1rem;
 }
 
 .card-content {
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-    border: 2px solid #d3d3d3; /* Light greyish border */
+    background-color: #ffffff; /* White background */
+    color: #234153; /* Dark blue text color */
+    border: 2px solid #dcdcdc; /* Light grey border */
     border-radius: 8px;
     padding: 16px;
     width: 100%;
 }
 
 .mt-8 {
-    margin-top: 2rem; /* Add margin-top to create space between elements */
+    margin-top: 1rem; /* Add margin-top to create space between elements */
 }
 
 .large-button {
     padding: 16px 32px; /* Larger padding */
     font-size: 1.5rem; /* Larger font size */
     border-radius: 9999px; /* Fully rounded */
-    background: linear-gradient(to right, #3b82f6, #9333ea); /* Gradient background */
+    background: linear-gradient(to right, #234153, #1e3a5f); /* Gradient background */
     color: #fff; /* White text */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: background 0.3s ease; /* Smooth transition */
 }
 
 .large-button:hover {
-    background: linear-gradient(to right, #2563eb, #7e22ce); /* Darker gradient on hover */
+    background: linear-gradient(to right, #1e3a5f, #162a3b); /* Darker gradient on hover */
 }
 
 .large-button:disabled {
@@ -62,14 +80,16 @@ h1 {
 }
 
 .result-box {
-    background-color: #3c67a0; /* Light blue-grey background */
-    color: #333; /* Dark text color */
-    border: 2px solid #cbd5e0; /* Light greyish border */
-    border-radius: 8px;
-    padding: 16px;
-    width: 100%;
+    background-color: #234153; /* White background */
+    color: #ffffff; /* Dark blue text color */
+    border: 2px solid #234153; /* Dark blue border */
+    border-radius: 12px;
+    padding: 16px; /* Smaller padding */
+    width: 60%; /* Smaller width */
+    height: 30%; /* Smaller height */
     margin-top: 1rem; /* Add margin-top to create space between elements */
     text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .text-center {
@@ -77,7 +97,7 @@ h1 {
 }
 
 .text-lg {
-    font-size: 1.125rem; /* Large text size */
+    font-size: 1.25rem; /* Large text size */
 }
 
 .font-bold {
@@ -85,9 +105,186 @@ h1 {
 }
 
 .text-gray-700 {
-    color: #4a5568; /* Dark gray text color */
+    color: #fafafa; /* Dark blue text color */
 }
 
 .text-gray-500 {
-    color: #a0aec0; /* Medium gray text color */
+    color: #6b6b6b; /* Medium grey text color */
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #dcdcdc;
+    border-radius: 12px;
+    padding: 2rem;
+    background-color: #d4f1ffb4;
+    transition: background-color 0.3s ease;
+    height: 200px; /* Fixed height */
+}
+
+.upload-area:hover {
+    background-color: #e5e5e5;
+}
+
+.upload-area p {
+    margin-top: 1rem;
+    color: #6b6b6b;
+}
+
+.thumbnail {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center the content */
+    width: 80%;
+    gap: 2rem;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    color: #234153; /* Dark blue text color */
+    border: 2px solid #dcdcdc; /* Light grey border */
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: 3rem; /* Add margin to ensure space between items */
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: #234153;
+    position: fixed;
+    bottom: 0;
+}
+
+.clear-button {
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 1rem; /* Normal font size */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #da6363; /* Red background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 2rem;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.clear-button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.landing-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0c1820; /* Dark blue background */
+  color: #ffffff; /* White text color */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  overflow: hidden;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.loading-circle {
+  margin-bottom: 2rem;
+}
+
+.landing-title {
+  font-size: 3rem;
+  color: #ffffff; /* White text color */
+  margin-bottom: 2rem;
+}
+
+.get-started-button {
+  padding: 16px 32px; /* Larger padding */
+  font-size: 1.5rem; /* Larger font size */
+  border-radius: 9999px; /* Fully rounded */
+  background: linear-gradient(to right, #ffffff, #e5e5e5); /* Gradient background */
+  color: #234153; /* Dark blue text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.get-started-button:hover {
+  background: linear-gradient(to right, #e5e5e5, #cacaca); /* Darker gradient on hover */
+}
+
+/* Add this to the end of your index.css file */
+.typing-animation {
+  overflow: hidden; /* Ensures the text is hidden until typed */
+  border-right: .15em solid rgb(162, 88, 212); /* Cursor effect */
+  white-space: nowrap; /* Keeps the text on a single line */
+  margin: 0 auto; /* Centers the text */
+  letter-spacing: .15em; /* Adds some spacing between letters */
+  animation: typing 3s steps(40, end), blink-caret .75s step-end;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 35% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(162, 88, 212); }
+}
+
+/* Add this to your index.css file */
+.download-button {
+  padding: 12px 24px; /* Padding for the button */
+  font-size: 1.25rem; /* Font size */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #4CAF50; /* Green background */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  margin-top: 1rem; /* Margin on top */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.download-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
 }

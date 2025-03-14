@@ -16,5 +16,5 @@ async def classify_image(file: UploadFile = File(...)):
     image = await file.read()
     # processed_image = preprocess_image(image, target_size=(224, 224))
     processed_image = convert_to_pil_image(image)
-    class_label, confidence_score = cnn_model.predict(processed_image)
-    return {"class": int(class_label), "confidence": float(confidence_score)}
+    binary_label, class_label, confidence_score = cnn_model.predict(processed_image)
+    return {"binary_class": binary_label,"class": class_label, "confidence": float(confidence_score)}
